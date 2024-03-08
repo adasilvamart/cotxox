@@ -74,5 +74,25 @@ public class Carrera {
     public Conductor getConductor() {
         return this.conductor;
     }
+
+    public double getCosteTotal() {
+        return getCosteEsperado();
+    }
+
+    public int getPropina() {
+        return this.propina;
+    }
+
+    public void liberarConductor() {
+        this.conductor.setOcupado(false);
+    }
+
+    public void recibirPropina(int i) {
+        this.propina = i;
+    }
+
+    public void realizarPago(double costeEsperado) {
+        this.costeTotal += costeEsperado;
+    }
     
 }
