@@ -17,9 +17,6 @@ public class Tarifa {
     }
 
     public static double getCosteTotalEsperado(Carrera carrera) {
-        double costeDistancia = getCosteDistancia(carrera.getDistancia());
-        double tiempoCarrera = getCosteTiempo(carrera.getTiempoEsperado());
-
-        return (costeDistancia + tiempoCarrera) - (((costeDistancia + tiempoCarrera) * PORCENTAJE_COMISION ) / 100);
+        return getCosteDistancia(carrera.getDistancia()) +  getCosteTiempo(carrera.getTiempoEsperado());
     }
 }
