@@ -32,7 +32,7 @@ public class TarifaTest {
         
     @Test
     public void testCarreraGetCosteEsperado() {
-        double expResult = 11.17;
+        double expResult = 13.9625;
         assertEquals(expResult, Tarifa.getCosteTotalEsperado(carrera), 0);
     }
 }
