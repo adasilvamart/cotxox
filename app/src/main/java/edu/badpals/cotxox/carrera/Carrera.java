@@ -1,5 +1,7 @@
 package edu.badpals.cotxox.carrera;
 
+import edu.badpals.cotxox.conductores.Conductor;
+import edu.badpals.cotxox.conductores.PoolConductores;
 import edu.badpals.cotxox.tarifa.Tarifa;
 
 public class Carrera {
@@ -11,6 +13,7 @@ public class Carrera {
     private int tiempoCarrera = 0;
     private double costeTotal = 0.0;
     private int propina = 0;
+    private Conductor conductor = null;
 
     public Carrera(String tarjetaCredito) {
         this.tarjetaCredito = tarjetaCredito;
@@ -62,6 +65,14 @@ public class Carrera {
 
     public double getCosteEsperado() {
         return Tarifa.getCosteTotalEsperado(this);
+    }
+
+    public void asignarConductor(PoolConductores conductores) {
+        this.conductor = conductores.asignarConductor();
+    }
+
+    public Conductor getConductor() {
+        return this.conductor;
     }
     
 }
