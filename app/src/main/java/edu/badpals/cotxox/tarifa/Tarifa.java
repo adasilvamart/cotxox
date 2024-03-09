@@ -17,14 +17,7 @@ public class Tarifa {
     }
 
     public static double getCosteTotalEsperado(Carrera carrera) {
-        
         double costeTotalEsperado = getCosteDistancia(carrera.getDistancia()) +  getCosteTiempo(carrera.getTiempoEsperado());
-        
-        if (costeTotalEsperado >= COSTE_MINIMO) {
-            return costeTotalEsperado;
-        }
-        
-        return 0.0;
-        
+        return costeTotalEsperado >= COSTE_MINIMO ? costeTotalEsperado : 0.0;
     }
 }
