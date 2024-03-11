@@ -34,3 +34,9 @@ application {
     // Define the main class for the application.
     mainClass = 'edu.badpals.cotxox.App'
 }
+
+jar {
+    manifest {
+        attributes 'Main-class' : 'edu.badpals.cotxox.App'
+    }
+}
